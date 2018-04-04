@@ -11,12 +11,12 @@ Ansible roles to setup Ubuntu desktop and Ubuntu server (14.04 and 16.04). This 
 First, you need to install Git and Ansible :
 ```
 sudo apt-get install git
-git clone https://github.com/Benoth/ansible-ubuntu.git
+git clone https://github.com/robert-tillsley/my_ubuntu_ansible.git
 cd ansible-ubuntu
 ./install.sh
 ```
 
-Then you need to customize the playbook `ansible-desktop.yml` (or create a new one) to suit your needs. Every roles are disabled by default.
+Then you need to customize the playbook `ansible-desktop.yml` (or create a new one) to suit your needs. All roles are disabled by default.
 
 Run `ansible-playbook ansible-desktop.yml --ask-become-pass` and enter your sudo password to run the playbook
 
@@ -25,7 +25,7 @@ Run `ansible-playbook ansible-desktop.yml --ask-become-pass` and enter your sudo
 | Role                     | Description                                                                                                                                                                                                                                                                                                                           |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | | **General** |
-| common                   | Install a lot of usefull packages (curl, htop, less, zip ... see [corresponding task file](https://github.com/Benoth/ansible-ubuntu/blob/master/roles/common/tasks/main.yml))                                                                                                                                                         |
+| common                   | Install a lot of usefull packages (curl, htop, less, zip ... see [corresponding task file](https://github.com/robert-tillsley/my_ubuntu_ansible/blob/master/roles/common/tasks/main.yml))                                                                                                                                                         |
 | locales                  | Configure system locales and timezone                                                                                                                                                                                                                                                                                                 |
 | java-openjdk             | Install Default Java JDK                                                                                                                                                                                                                                                                                                              |
 | ripgrep                  | Install [ripgrep](https://github.com/jimhester/ripgrep) (grep++)                            |
