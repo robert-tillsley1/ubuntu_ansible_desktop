@@ -28,12 +28,12 @@
     # - { role: memcached, become: true }
     # - { role: mysql57, become: true }
     # - { role: mysql56, become: true }
-    # - { role: nginx, become: true }
-    # - { role: nginx-php-fpm, become: true }
+  - { role: nginx, become: true }
+  - { role: nginx-php-fpm, become: true }
   - { role: nodejs, become: true }
   - { role: php, become: true }
   - { role: php-pecl, become: true }
-    # - { role: php-phar-tools, become: true }
+# - { role: php-phar-tools, become: true }
   - { role: python, become: true }
     # - { role: redis, become: true }
     # - { role: rbenv, become: true }
@@ -72,7 +72,7 @@
   - { role: notepadqq, become: true }
   - { role: notify-osd, become: true }
   - { role: qutebrowser, become: true }
-    # - { role: remarkable, become: true }
+# - { role: remarkable, become: true }
   - { role: remmina, become: true }
   - { role: ripgrep, become: true }
   - { role: rofi, become: true }
@@ -84,7 +84,7 @@
     # - { role: spotify, become: true }
   - { role: sublime3, become: true }
   - { role: sunflower, become: true }
-    # - { role: teamviewer, become: true }
+# - { role: teamviewer, become: true }
     # - { role: thunderbird, become: true }
   - { role: ultra-flat-icons, become: true }
     # - { role: urxvt-perls }
