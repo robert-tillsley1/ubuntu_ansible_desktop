@@ -1,0 +1,14 @@
+---
+
+- name: Test Ubuntu Desktop Setup
+  hosts: localhost
+  
+
+  roles:
+    # Common Roles
+  - { role: zsh, become: true }
+
+    # Server Roles
+
+    # Desktop Roles
+  - { role: desktop, become: true }

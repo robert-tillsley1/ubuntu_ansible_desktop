@@ -23,12 +23,14 @@
     - wmctrl # to control windows
     - xclip # to manipulate the clipboard
     - xdotool # to control windows
+    - conky-all
 
 - name: Install common desktop packages if Ubuntu 16.04
   apt: pkg={{ item }} state=latest update_cache=yes cache_valid_time={{ aptcachetime }}
   with_items:
     - fonts-hack-ttf
-  when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '16.04'
+  when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == 'latest'
+#  when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '16.04'
 
 - name: Block Ubuntu product search in system host file
   lineinfile: dest=/etc/hosts regexp="^127\.0\.0\.1   productsearch.ubuntu.com$" line="127.0.0.1   productsearch.ubuntu.com" state=present
